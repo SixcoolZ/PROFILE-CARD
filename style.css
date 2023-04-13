@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+body{
+    display: grid;
+    place-items: center;
+    background: hsl(185, 75%, 39%);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 650px, 650px;
+    background-position-y:-160px, 320px;
+    background-position-x: 50px, 900px ;
+    min-height: 100vh;
+}
+.card{
+    background: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 59%);
+}
+.bg-image{
+    width: 100%;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.profileImg{
+    border: solid white;
+    border-radius: 50%;
+    background: hsl(0, 0%, 100%);
+    padding: 5px;
+    margin-top: -60px;
+}
+.profile-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+h1{
+    color: hsl(229, 23%, 23%);
+    font-size: 1.5rem;
+    font-weight: 700
+}
+.profile-name-p{
+    font-size: 1.4rem;
+}
+.profile-name-p2{
+    margin: 0.5rem 0;
+}
+hr{
+    border: 0.1rem thin hsl(185, 75%, 39%);
+    margin: 1rem 0;
+}
+.profile-value{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+    margin-bottom: 1rem;
+}
+.profile-value p{
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 685px){
+    main{
+        padding: 0 0.5rem;
+    }
+}
