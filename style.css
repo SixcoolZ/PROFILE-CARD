@@ -6,22 +6,45 @@
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
 }
-body{
+.card-wrapper{
     display: grid;
     place-items: center;
     background: hsl(185, 75%, 39%);
-    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    /* background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom right;
     background-size: 650px, 650px;
     background-position-y:-160px, 320px;
-    background-position-x: 50px, 900px ;
+    background-position-x: 50px, 900px ; */
     min-height: 100vh;
+}
+.card-wrapper::before, .card-wrapper::after{
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background-size: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.card-wrapper::before{
+    background: url(./images/bg-pattern-top.svg) no-repeat bottom right;
+    top: 0;
+    left: 0;
+}
+.card-wrapper::after{
+    background: url(./images/bg-pattern-bottom.svg) no-repeat top left;
+    top: 100%;
+    left: 100%;
 }
 .card{
     background: hsl(0, 0%, 100%);
     color: hsl(0, 0%, 59%);
     border-radius: 0.8rem;
+    text-align: center;
 }
 .bg-image{
     width: 100%;
@@ -74,7 +97,7 @@ span{
 }
 .profile-value p{
     font-size: 0.9rem;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 1rem;
 }
 
